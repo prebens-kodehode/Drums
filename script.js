@@ -10,13 +10,18 @@ const drums = [
   { name: "Drum_7", sound: "./audio/bongo7.wav", lowKey: "k" },
   { name: "Drum_8", sound: "./audio/bongo8.wav", lowKey: "l" },
 ];
+
+// variabler
 const main = document.querySelector("main");
 const wrapper = document.createElement("div");
 const musicBtn = document.createElement("button");
 const backgroundMusic = new Audio("./audio/on-vacation.mp3");
+
+// append wrapper to document
 wrapper.classList.add("wrapper");
 main.append(wrapper);
 
+// creates drums and add event listeners
 for (let drum of drums) {
   const img = document.createElement("img");
   img.src = `./images/${drum.name}.png`;
@@ -34,11 +39,13 @@ for (let drum of drums) {
   wrapper.append(img);
 }
 
+// appends Play Music button
 musicBtn.textContent = "Play Music";
 musicBtn.classList.add("play-btn");
 musicBtn.addEventListener("click", playMusic);
 main.append(musicBtn);
 
+// plays corresponding sound
 function drumClicked(name, sound) {
   const drum = document.querySelector(`.${name}`);
   const drumSound = new Audio(sound);
@@ -52,6 +59,7 @@ function drumClicked(name, sound) {
 backgroundMusic.volume = 0.2;
 let isPlaying = false;
 
+// play/pause music
 function playMusic() {
   if (!isPlaying) {
     setTimeout(() => {
