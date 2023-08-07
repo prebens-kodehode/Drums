@@ -25,6 +25,7 @@ main.append(wrapper);
 for (let drum of drums) {
   const img = document.createElement("img");
   img.src = `./images/${drum.name}.png`;
+  img.alt = "Tribal Drum";
   img.classList.add(drum.name);
   img.addEventListener("click", () => {
     drumClicked(drum.name, drum.sound);
