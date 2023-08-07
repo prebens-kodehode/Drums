@@ -48,7 +48,7 @@ function drumClicked(name, sound) {
   }, 150);
 }
 
-const backgroundMusic = new Audio("/audio/on-vacation.mp3");
+const backgroundMusic = new Audio("./audio/on-vacation.mp3");
 backgroundMusic.volume = 0.2;
 let isPlaying = false;
 
