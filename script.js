@@ -1,17 +1,19 @@
 "use strict";
 
 const drums = [
-  { name: "Drum_1", sound: "./audio/bongo1.mp3", lowKey: "w", upKey: "W" },
-  { name: "Drum_2", sound: "./audio/bongo2.mp3", lowKey: "a", upKey: "A" },
-  { name: "Drum_3", sound: "./audio/bongo3.mp3", lowKey: "s", upKey: "S" },
-  { name: "Drum_4", sound: "./audio/bongo4.mp3", lowKey: "d", upKey: "D" },
-  { name: "Drum_5", sound: "./audio/bongo5.mp3", lowKey: "i", upKey: "I" },
-  { name: "Drum_6", sound: "./audio/bongo6.wav", lowKey: "j", upKey: "J" },
-  { name: "Drum_7", sound: "./audio/bongo7.wav", lowKey: "k", upKey: "K" },
-  { name: "Drum_8", sound: "./audio/bongo8.wav", lowKey: "l", upKey: "L" },
+  { name: "Drum_1", sound: "./audio/bongo1.mp3", lowKey: "w" },
+  { name: "Drum_2", sound: "./audio/bongo2.mp3", lowKey: "a" },
+  { name: "Drum_3", sound: "./audio/bongo3.mp3", lowKey: "s" },
+  { name: "Drum_4", sound: "./audio/bongo4.mp3", lowKey: "d" },
+  { name: "Drum_5", sound: "./audio/bongo5.mp3", lowKey: "i" },
+  { name: "Drum_6", sound: "./audio/bongo6.wav", lowKey: "j" },
+  { name: "Drum_7", sound: "./audio/bongo7.wav", lowKey: "k" },
+  { name: "Drum_8", sound: "./audio/bongo8.wav", lowKey: "l" },
 ];
 const main = document.querySelector("main");
 const wrapper = document.createElement("div");
+const musicBtn = document.createElement("button");
+const backgroundMusic = new Audio("./audio/on-vacation.mp3");
 wrapper.classList.add("wrapper");
 main.append(wrapper);
 
@@ -25,15 +27,14 @@ for (let drum of drums) {
   window.addEventListener("keydown", (e) => {
     if (e.key === drum.lowKey) {
       drumClicked(drum.name, drum.sound);
-    } else if (e.key === drum.upKey) {
+    } else if (e.key === drum.lowKey.toUpperCase()) {
       drumClicked(drum.name, drum.sound);
     }
   });
   wrapper.append(img);
 }
 
-const musicBtn = document.createElement("button");
-musicBtn.textContent = "Play Background Music";
+musicBtn.textContent = "Play Music";
 musicBtn.classList.add("play-btn");
 musicBtn.addEventListener("click", playMusic);
 main.append(musicBtn);
@@ -48,7 +49,6 @@ function drumClicked(name, sound) {
   }, 150);
 }
 
-const backgroundMusic = new Audio("./audio/on-vacation.mp3");
 backgroundMusic.volume = 0.2;
 let isPlaying = false;
 
@@ -59,14 +59,14 @@ function playMusic() {
       backgroundMusic.play();
       isPlaying = true;
       musicBtn.classList.add("radiate");
-      musicBtn.textContent = "Pause Background Music";
+      musicBtn.textContent = "Pause Music";
     }, 200);
   } else {
     setTimeout(() => {
       backgroundMusic.pause();
       isPlaying = false;
       musicBtn.classList.remove("radiate");
-      musicBtn.textContent = "Play Background Music";
+      musicBtn.textContent = "Play Music";
     }, 200);
   }
 }
