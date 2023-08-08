@@ -57,7 +57,7 @@ function drumClicked(name, sound) {
   }, 150);
 }
 
-backgroundMusic.volume = 0.3;
+backgroundMusic.volume = 0.25;
 let isPlaying = false;
 
 // play/pause music
