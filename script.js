@@ -63,19 +63,15 @@ let isPlaying = false;
 // play/pause music
 function playMusic() {
   if (!isPlaying) {
-    setTimeout(() => {
-      backgroundMusic.loop = true;
-      backgroundMusic.play();
-      isPlaying = true;
-      musicBtn.classList.add("radiate");
-      musicBtn.textContent = "Pause Music";
-    }, 200);
+    backgroundMusic.loop = true;
+    backgroundMusic.play();
+    isPlaying = true;
+    musicBtn.classList.add("radiate");
+    musicBtn.textContent = "Pause Music";
   } else {
-    setTimeout(() => {
-      backgroundMusic.pause();
-      isPlaying = false;
-      musicBtn.classList.remove("radiate");
-      musicBtn.textContent = "Play Music";
-    }, 200);
+    backgroundMusic.pause();
+    isPlaying = false;
+    musicBtn.classList.remove("radiate");
+    musicBtn.textContent = "Play Music";
   }
 }
