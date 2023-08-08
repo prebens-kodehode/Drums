@@ -11,7 +11,7 @@ const drums = [
   { name: "Drum_8", sound: "./audio/bongo8.mp3", lowKey: "l" },
 ];
 
-// variables
+// element variables
 const main = document.querySelector("main");
 const wrapper = document.createElement("div");
 const musicBtn = document.createElement("button");
@@ -21,7 +21,7 @@ const backgroundMusic = new Audio("./audio/on-vacation.mp3");
 wrapper.classList.add("wrapper");
 main.append(wrapper);
 
-// creates drums and add event listeners
+// creates drums with content and add event listeners
 for (let drum of drums) {
   const img = document.createElement("img");
   img.src = `./images/${drum.name}.png`;
@@ -31,6 +31,9 @@ for (let drum of drums) {
     drumClicked(drum.name, drum.sound);
   });
   window.addEventListener("keydown", (e) => {
+    //  this didn't work
+    // if (e.key === drum.lowKey || drum.lowKey.toUpperCase())
+
     if (e.key === drum.lowKey) {
       drumClicked(drum.name, drum.sound);
     } else if (e.key === drum.lowKey.toUpperCase()) {
@@ -40,7 +43,7 @@ for (let drum of drums) {
   wrapper.append(img);
 }
 
-// appends Play Music button
+//adds content and appends Play Music button
 musicBtn.textContent = "Play Music";
 musicBtn.classList.add("play-btn");
 musicBtn.addEventListener("click", playMusic);
@@ -58,9 +61,10 @@ function drumClicked(name, sound) {
 }
 
 backgroundMusic.volume = 0.25;
-let isPlaying = false;
 
 // play/pause music
+let isPlaying = false;
+
 function playMusic() {
   if (!isPlaying) {
     backgroundMusic.loop = true;
