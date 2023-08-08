@@ -6,9 +6,9 @@ const drums = [
   { name: "Drum_3", sound: "./audio/bongo3.mp3", lowKey: "s" },
   { name: "Drum_4", sound: "./audio/bongo4.mp3", lowKey: "d" },
   { name: "Drum_5", sound: "./audio/bongo5.mp3", lowKey: "i" },
-  { name: "Drum_6", sound: "./audio/bongo6.wav", lowKey: "j" },
-  { name: "Drum_7", sound: "./audio/bongo7.wav", lowKey: "k" },
-  { name: "Drum_8", sound: "./audio/bongo8.wav", lowKey: "l" },
+  { name: "Drum_6", sound: "./audio/bongo6.mp3", lowKey: "j" },
+  { name: "Drum_7", sound: "./audio/bongo7.mp3", lowKey: "k" },
+  { name: "Drum_8", sound: "./audio/bongo8.mp3", lowKey: "l" },
 ];
 
 // variabler
