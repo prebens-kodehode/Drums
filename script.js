@@ -30,18 +30,21 @@ for (let drum of drums) {
   img.addEventListener("click", () => {
     drumClicked(drum.name, drum.sound);
   });
-  window.addEventListener("keydown", (e) => {
-    //  this didn't work
-    // if (e.key === drum.lowKey || drum.lowKey.toUpperCase())
-
-    if (e.key === drum.lowKey) {
-      drumClicked(drum.name, drum.sound);
-    } else if (e.key === drum.lowKey.toUpperCase()) {
-      drumClicked(drum.name, drum.sound);
-    }
-  });
   wrapper.append(img);
 }
+
+window.addEventListener("keydown", (e) => {
+  //  this didn't work
+  //e.key === drum.lowKey || drum.lowKey.toUpperCase()
+  const lowerCase = drums.find((drum) => e.key === drum.lowKey);
+  if (lowerCase) {
+    drumClicked(lowerCase.name, lowerCase.sound);
+  }
+  const upperCase = drums.find((drum) => e.key === drum.lowKey.toUpperCase());
+  if (upperCase) {
+    drumClicked(upperCase.name, upperCase.sound);
+  }
+});
 
 //adds content and appends Play Music button
 musicBtn.textContent = "Play Music";
