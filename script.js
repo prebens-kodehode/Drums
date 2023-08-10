@@ -21,7 +21,7 @@ const backgroundMusic = new Audio("./audio/on-vacation.mp3");
 wrapper.classList.add("wrapper");
 main.append(wrapper);
 
-// creates drums with content and add event listeners
+// creates drums with content and add click event listener
 for (let drum of drums) {
   const img = document.createElement("img");
   img.src = `./images/${drum.name}.png`;
@@ -33,6 +33,7 @@ for (let drum of drums) {
   wrapper.append(img);
 }
 
+//runs drumClicked() when the correct key is pressed
 window.addEventListener("keydown", (e) => {
   // this didn't work
   // e.key === drum.lowKey || drum.lowKey.toUpperCase()
