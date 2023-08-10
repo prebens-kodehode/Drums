@@ -34,8 +34,8 @@ for (let drum of drums) {
 }
 
 window.addEventListener("keydown", (e) => {
-  //  this didn't work
-  //e.key === drum.lowKey || drum.lowKey.toUpperCase()
+  // this didn't work
+  // e.key === drum.lowKey || drum.lowKey.toUpperCase()
   const lowerCase = drums.find((drum) => e.key === drum.lowKey);
   if (lowerCase) {
     drumClicked(lowerCase.name, lowerCase.sound);
