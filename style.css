@@ -59,14 +59,14 @@ p {
   background: var(--h2-color);
   border: none;
   border-radius: 2rem;
-  filter: drop-shadow(0 0.3rem 0.3rem rgb(66, 66, 66));
-  transition: transform 500ms;
+  filter: drop-shadow(0 0.3rem 0.3rem rgba(66, 66, 66, 0.75));
+  transition: transform 1000ms;
   cursor: pointer;
 }
 .play-btn:hover {
   outline: 0.2rem solid var(--p-color);
-  transform: translateY(-0.2rem);
-  transition: transform 200ms;
+  transform: translateY(-0.35rem) scale(1.05);
+  transition: transform 250ms;
 }
 
 .play-btn:active {
@@ -86,7 +86,7 @@ img {
 img:hover {
   transition: 200ms;
   transform: scale(1.02);
-  filter: drop-shadow(0 0.5rem 0.5rem rgb(66, 66, 66));
+  filter: drop-shadow(0 0.5rem 0.5rem rgba(66, 66, 66, 0.75));
 }
 
 .bounce {
