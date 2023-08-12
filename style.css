@@ -2,6 +2,7 @@
   --h1-color: rgb(2, 145, 45);
   --h2-color: rgb(255, 133, 19);
   --p-color: rgb(39, 63, 43);
+  --radiate-color: rgb(116, 255, 51);
 }
 
 body {
@@ -33,7 +34,7 @@ h1 {
 
 h2 {
   color: var(--h2-color);
-  text-shadow: 0 0 0.75rem #000000;
+  text-shadow: 0 0 0.75rem #ffffff;
   letter-spacing: 0.1rem;
   margin: 0 1rem;
 }
@@ -58,7 +59,7 @@ p {
   background: var(--h2-color);
   border: none;
   border-radius: 2rem;
-  filter: drop-shadow(0 0.3rem 0.5rem rgb(66, 66, 66));
+  filter: drop-shadow(0 0.3rem 0.3rem rgb(66, 66, 66));
   transition: transform 500ms;
   cursor: pointer;
 }
@@ -79,11 +80,13 @@ img {
   cursor: pointer;
   margin: 2rem;
   user-select: none;
+  transition: 500ms;
 }
 
 img:hover {
+  transition: 200ms;
   transform: scale(1.02);
-  filter: drop-shadow(0 0.3rem 0.5rem rgb(66, 66, 66));
+  filter: drop-shadow(0 0.5rem 0.5rem rgb(66, 66, 66));
 }
 
 .bounce {
@@ -124,19 +127,19 @@ header,
 
 @keyframes radiate {
   0% {
-    filter: drop-shadow(0 0 0.5rem rgb(253, 203, 108));
+    filter: drop-shadow(0 0 0.5rem var(--radiate-color));
   }
   25% {
-    filter: drop-shadow(0 0 2rem rgb(253, 203, 108));
+    filter: drop-shadow(0 0 2rem var(--radiate-color));
   }
   50% {
-    filter: drop-shadow(0 0 1rem rgb(253, 203, 108));
+    filter: drop-shadow(0 0 1rem var(--radiate-color));
   }
   75% {
-    filter: drop-shadow(0 0 2rem rgb(253, 203, 108));
+    filter: drop-shadow(0 0 2rem var(--radiate-color));
   }
   100% {
-    filter: drop-shadow(0 0 0.5rem rgb(253, 203, 108));
+    filter: drop-shadow(0 0 0.5rem var(--radiate-color));
   }
 }
 
