@@ -127,18 +127,28 @@ header,
 
 @keyframes radiate {
   0% {
+    transform: translateY(-0.35rem) scale(1.05) rotate(0deg);
+    transform-origin: bottom;
     filter: drop-shadow(0 0 0.5rem var(--radiate-color));
   }
   25% {
+    transform: translateY(-0.35rem) scale(1.05) rotate(-3deg);
+    transform-origin: bottom;
     filter: drop-shadow(0 0 2rem var(--radiate-color));
   }
   50% {
+    transform: translateY(-0.35rem) scale(1.05) rotate(0deg);
+    transform-origin: bottom;
     filter: drop-shadow(0 0 1rem var(--radiate-color));
   }
   75% {
+    transform: translateY(-0.35rem) scale(1.05) rotate(3deg);
+    transform-origin: bottom;
     filter: drop-shadow(0 0 2rem var(--radiate-color));
   }
   100% {
+    transform: translateY(-0.35rem) scale(1.05) rotate(0deg);
+    transform-origin: bottom;
     filter: drop-shadow(0 0 0.5rem var(--radiate-color));
   }
 }
