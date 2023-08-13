@@ -3,6 +3,7 @@
   --h2-color: rgb(255, 133, 19);
   --p-color: rgb(39, 63, 43);
   --radiate-color: rgb(116, 255, 51);
+  --text-shadow-light: rgb(250, 250, 250);
 }
 
 body {
@@ -27,14 +28,14 @@ header {
 h1 {
   font-size: 4rem;
   color: var(--h1-color);
-  text-shadow: 0 0 1rem #fff;
-  -webkit-text-stroke: 0.05rem #fff;
+  text-shadow: 0 0 1rem var(--text-shadow-light);
+  -webkit-text-stroke: 0.05rem var(--text-shadow-light);
   margin: 2rem 1rem 0 1rem;
 }
 
 h2 {
   color: var(--h2-color);
-  text-shadow: 0 0 0.75rem #ffffff;
+  text-shadow: 0 0 0.75rem var(--text-shadow-light);
   letter-spacing: 0.1rem;
   margin: 0 1rem;
 }
@@ -94,7 +95,7 @@ img:hover {
 }
 
 .radiate {
-  animation: radiate 2000ms infinite;
+  animation: radiate 2000ms infinite cubic-bezier(0.5, 0.6, 0.5, 0.4);
   outline: 0.2rem solid var(--p-color);
 }
 
