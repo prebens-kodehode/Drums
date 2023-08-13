@@ -35,15 +35,9 @@ for (let drum of drums) {
 
 //runs drumClicked() when the correct key is pressed
 window.addEventListener("keydown", (e) => {
-  // this didn't work
-  // e.key === drum.lowKey || drum.lowKey.toUpperCase()
-  const lowerCase = drums.find((drum) => e.key === drum.lowKey);
-  if (lowerCase) {
-    drumClicked(lowerCase.name, lowerCase.sound);
-  }
-  const upperCase = drums.find((drum) => e.key === drum.lowKey.toUpperCase());
-  if (upperCase) {
-    drumClicked(upperCase.name, upperCase.sound);
+  const drum = drums.find((drum) => e.key.toLowerCase() === drum.lowKey);
+  if (drum) {
+    drumClicked(drum.name, drum.sound);
   }
 });
 
@@ -82,4 +76,6 @@ function playMusic() {
     musicBtn.classList.remove("radiate");
     musicBtn.textContent = "Play Music";
   }
+  // removes focus from Music Button
+  musicBtn.blur();
 }
