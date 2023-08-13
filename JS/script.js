@@ -1,21 +1,21 @@
 "use strict";
 
 const drums = [
-  { name: "Drum_1", sound: "./audio/bongo1.mp3", lowKey: "w" },
-  { name: "Drum_2", sound: "./audio/bongo2.mp3", lowKey: "a" },
-  { name: "Drum_3", sound: "./audio/bongo3.mp3", lowKey: "s" },
-  { name: "Drum_4", sound: "./audio/bongo4.mp3", lowKey: "d" },
-  { name: "Drum_5", sound: "./audio/bongo5.mp3", lowKey: "i" },
-  { name: "Drum_6", sound: "./audio/bongo6.mp3", lowKey: "j" },
-  { name: "Drum_7", sound: "./audio/bongo7.mp3", lowKey: "k" },
-  { name: "Drum_8", sound: "./audio/bongo8.mp3", lowKey: "l" },
+  { name: "Drum_1", sound: "../audio/bongo1.mp3", lowKey: "w" },
+  { name: "Drum_2", sound: "../audio/bongo2.mp3", lowKey: "a" },
+  { name: "Drum_3", sound: "../audio/bongo3.mp3", lowKey: "s" },
+  { name: "Drum_4", sound: "../audio/bongo4.mp3", lowKey: "d" },
+  { name: "Drum_5", sound: "../audio/bongo5.mp3", lowKey: "i" },
+  { name: "Drum_6", sound: "../audio/bongo6.mp3", lowKey: "j" },
+  { name: "Drum_7", sound: "../audio/bongo7.mp3", lowKey: "k" },
+  { name: "Drum_8", sound: "../audio/bongo8.mp3", lowKey: "l" },
 ];
 
 // element variables
 const main = document.querySelector("main");
 const wrapper = document.createElement("div");
 const musicBtn = document.createElement("button");
-const backgroundMusic = new Audio("./audio/on-vacation.mp3");
+const backgroundMusic = new Audio("../audio/on-vacation.mp3");
 
 // append wrapper to document
 wrapper.classList.add("wrapper");
@@ -24,7 +24,7 @@ main.append(wrapper);
 // creates drums with content and add click event listener
 for (let drum of drums) {
   const img = document.createElement("img");
-  img.src = `./images/${drum.name}.png`;
+  img.src = `../images/${drum.name}.png`;
   img.alt = "Tribal Drum";
   img.classList.add(drum.name);
   img.addEventListener("click", () => {
