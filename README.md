@@ -13,11 +13,19 @@ Background Music Toggle: A large button at the bottom of the page allows you to 
 When the music is playing, the button will animate with a drop shadow radiating in and out, along with a swinging animation from side to side.
 
 Keyboard Controls
+
 W: Play the beat of the first drum.
+
 A: Play the beat of the second drum.
+
 S: Play the beat of the third drum.
+
 D: Play the beat of the fourth drum.
+
 I: Play the beat of the fifth drum.
+
 J: Play the beat of the sixth drum.
+
 K: Play the beat of the seventh drum.
+
 L: Play the beat of the eigth drum.
