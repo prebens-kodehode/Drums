@@ -1,4 +1,4 @@
-#Welcome to the Bongo Hero website! This simple and interactive web page allows you to explore the captivating world of tribal drums through #both visual and auditory experiences. 
+Welcome to the Bongo Hero website! This simple and interactive web page allows you to explore the captivating world of tribal drums through both visual and auditory experiences. 
 Immerse yourself in the beats and rhythms of different drums, and even toggle background music to enhance your overall experience. 
 
 Tribal Drum Images: The center of the webpage features a collection of tribal drums, each with its own unique design and character.
